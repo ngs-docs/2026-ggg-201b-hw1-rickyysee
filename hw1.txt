@@ -1,0 +1,125 @@
+## Which variants are present in which samples?
+The reads were mapped to the ecoli-rel606 reference genome and variant calling was performed to produce vcf files. The ensemble-vep package was installed to the `mapping` env and used to produce summaries of each run.
+
+```
+SRR2584403_1: 2 single nucleotide variants
+ecoli_1329520_T/G	ecoli:1329520	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141016_C/A	ecoli:4141016	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+
+SRR2584404_1: 1 deletion and 3 single nucleotide variants
+ecoli_238917_G/T	ecoli:238917	T	gene-ECB_RS01110	rna-ECB_RS01110	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=938;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_806310_ATT/AT	ecoli:806310	-	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1329520_T/G	ecoli:1329520	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141016_C/A	ecoli:4141016	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+
+SRR2584405_1: 1 insertion and 41 single nucleotide variants
+ecoli_15382_C/T	ecoli:15382	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_154497_T/G	ecoli:154497	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_254101_T/G	ecoli:254101	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_649522_C/T	ecoli:649522	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_692265_C/T	ecoli:692265	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_692268_A/G	ecoli:692268	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_708118_T/C	ecoli:708118	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1176010_T/G	ecoli:1176010	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1503866_A/C	ecoli:1503866	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1680445_A/T	ecoli:1680445	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1680446_A/T	ecoli:1680446	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1733754_A/T	ecoli:1733754	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1742;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=2327;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2020126_C/G	ecoli:2020126	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2103919_ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG/ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG	ecoli:2103918-2103919	CCAG	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2296329_A/C	ecoli:2296329	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2330469_A/T	ecoli:2330469	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2330472_A/T	ecoli:2330472	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2416966_C/T	ecoli:2416966	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2671373_T/G	ecoli:2671373	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2671376_C/A	ecoli:2671376	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2682710_G/C	ecoli:2682710	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2682764_C/T	ecoli:2682764	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3090762_C/A	ecoli:3090762	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3090763_T/G	ecoli:3090763	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3268057_T/C	ecoli:3268057	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16545	rna-ECB_RS16545	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16550	rna-ECB_RS16550	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=190;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16555	rna-ECB_RS16555	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=280;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16560	rna-ECB_RS16560	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=490;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16565	rna-ECB_RS16565	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3581;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16570	rna-ECB_RS16570	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3699;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16575	rna-ECB_RS16575	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3844;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3509753_T/C	ecoli:3509753	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3568506_T/G	ecoli:3568506	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3762120_C/A	ecoli:3762120	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4029556_G/T	ecoli:4029556	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4029559_A/C	ecoli:4029559	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20630	rna-ECB_RS20630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3590;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20635	rna-ECB_RS20635	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3429;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20640	rna-ECB_RS20640	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=339;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20645	rna-ECB_RS20645	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4497049_T/G	ecoli:4497049	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4503866_T/C	ecoli:4503866	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4504217_G/A	ecoli:4504217	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4504253_G/A	ecoli:4504253	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4505396_T/C	ecoli:4505396	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4505407_G/A	ecoli:4505407	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4506070_A/T	ecoli:4506070	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22620	rna-ECB_RS22620	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1735;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22625	rna-ECB_RS22625	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1856;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22630	rna-ECB_RS22630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1971;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+
+SRR2584857_1: 1 insertion and 4 single nucleotide variants
+ecoli_920514_T/C	ecoli:920514	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3931002_A/C	ecoli:3931002	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141441_C/T	ecoli:4141441	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4202391_T/G	ecoli:4202391	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4530779_CACCCTAACCCT/CACCCTAACCCTAACCCT	ecoli:4530778-4530779	AACCCT	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+```
+
+## Which variants are shared between two or more samples?
+We can use bcftools commands to compare all vcfs. First, compress the vcfs with `bgzip`, then index them with `bcftools index`. Finally, we can run `bcftools isec` with the option `-n +2` in order to find variants in 2 or more files. This could have instead been done with grep commands but I imagine that would be less efficient for large files since there is no compression or indexing step.
+
+```
+ecoli	1329520	T	G	1100
+ecoli	4141016	C	A	1100
+```
+
+These two variants were shared between the `SRR2584403_1` and `SRR2584404_1` samples. This can be confirmed by checking the `isec/sites.txt` file as well as the `isec/000[1:3].vcf` files, which show the variants found in 2+ samples within that respective sample.
+
+## Are there any variants that stand out in terms of their likely biological impact?
+If alterations occur in intergenic regions, these would be difficult tie to a biological impact since they may or may not have any epigenetic effects (this data would not show that). Two samples had some SNVs near gene regions, with one sample (SRR2584405_1) containing **20** SNVs near gene regions.
+
+```
+SRR2584404_1: 1 SNV upstream of a gene
+ecoli_238917_G/T	ecoli:238917	T	gene-ECB_RS01110	rna-ECB_RS01110	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=938;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+
+
+SRR2584405_1: 20 SNVs near a gene
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1742;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=2327;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16545	rna-ECB_RS16545	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16550	rna-ECB_RS16550	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=190;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16555	rna-ECB_RS16555	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=280;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16560	rna-ECB_RS16560	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=490;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16565	rna-ECB_RS16565	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3581;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16570	rna-ECB_RS16570	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3699;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16575	rna-ECB_RS16575	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3844;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20630	rna-ECB_RS20630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3590;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20635	rna-ECB_RS20635	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3429;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20640	rna-ECB_RS20640	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=339;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20645	rna-ECB_RS20645	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22620	rna-ECB_RS22620	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1735;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22625	rna-ECB_RS22625	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1856;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22630	rna-ECB_RS22630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1971;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+```
+These variants would likely have biologically relevant effects and would be worth investigating further. Although there were indels found, they were at intergenic regions and likely would not lead to frameshift mutations unless within a gene or at the promoter sequence.
+
+---
+**Note:** this document might be more digestible if opened as a markdown file. Can simply change the file ending to `.md`
