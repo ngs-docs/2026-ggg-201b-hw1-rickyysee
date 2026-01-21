@@ -1,4 +1,4 @@
-SAMPLES = ["SRR2584857_1"]
+SAMPLES = ["SRR2584403_1", "SRR2584404_1", "SRR2584405_1", "SRR2584857_1"]
 GENOME = ["ecoli-rel606"]
 
 rule make_vcf:
@@ -7,6 +7,7 @@ rule make_vcf:
                sample=SAMPLES, genome=GENOME),
         expand("outputs/{sample}.x.{genome}.vep.txt",
               sample=SAMPLES, genome=GENOME),
+        "isec/0000.vcf"
   
 rule uncompress_genome:
     input: "{genome}.fa.gz"
@@ -70,6 +71,7 @@ rule tabix:
         gff="{filename}.gff.gz",
     output:
         tabix_idx='{filename}.gff.gz.tbi',
+    conda: "mapping"
     shell: """
         tabix {input}
     """
@@ -88,3 +90,40 @@ rule predict_effects:
     shell: """
        vep --fasta {input.fasta} --gff {input.gff} -i {input.vcf} -o {output.txt}
     """
+
+rule compress_vcfs:
+    input:
+        vcf="outputs/{reads}.x.{genome}.vcf"
+    output:
+        gz="isec/{reads}.x.{genome}.vcf.gz",
+    conda: "mapping"
+    shell: 
+        """
+        mkdir -p isec
+        bgzip -kc {input} > {output}
+        """
+
+rule index_vcfs:
+    input:
+        gz="isec/{reads}.x.{genome}.vcf.gz"
+    output:
+        csi="isec/{reads}.x.{genome}.vcf.gz.csi"
+    conda: "mapping"
+    shell: 
+        """
+        bcftools index {input}
+        """
+
+rule compare_vcfs:
+    input:
+        gz=expand("isec/{sample}.x.{genome}.vcf.gz",
+               sample=SAMPLES, genome=GENOME),
+        csi=expand("isec/{sample}.x.{genome}.vcf.gz.csi",
+              sample=SAMPLES, genome=GENOME),
+    output:
+        "isec/0000.vcf"
+    conda: "mapping"
+    shell:
+        """
+        bcftools isec -n +2 {input.gz} -p isec
+        """
